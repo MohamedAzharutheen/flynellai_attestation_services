@@ -129,7 +129,7 @@ export default function ContactPage() {
                       </Typography>
                       <Typography
                         component="a"
-                        href="tel:+919876543210"
+                        href="tel:+919994034441"
                         sx={{
                           display: "block",
                           color: "inherit",
@@ -137,7 +137,7 @@ export default function ContactPage() {
                           fontSize: "0.95rem",
                         }}
                       >
-                        +91 98765 43210
+                        +91 99940 34441
                       </Typography>
                     </Box>
                   </Stack>

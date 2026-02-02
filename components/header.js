@@ -74,9 +74,7 @@ export default function Header() {
                 "&:hover": { backgroundColor: "transparent", opacity: 0.8 },
               }}
             >
-              <Typography variant="h6" sx={{ fontWeight: 700 }}>
-                AttestationPro
-              </Typography>
+            <Image src="/flynella-attestation.png" alt="Attestation Services" width={100} height={100} />
             </Button>
           </MotionBox>
 
@@ -149,7 +147,7 @@ export default function Header() {
             <Stack spacing={0.5}>
               <Stack direction="row" spacing={1} alignItems="center">
                 <PhoneIcon sx={{ fontSize: 16 }} />
-                <Typography variant="body2">+91 98765 43210</Typography>
+                <Typography variant="body2">+91 99940 34441</Typography>
               </Stack>
               <Stack direction="row" spacing={1} alignItems="center">
                 <EmailIcon sx={{ fontSize: 16 }} />
@@ -262,7 +260,7 @@ export default function Header() {
                 <Stack spacing={1.5}>
                   <Stack direction="row" spacing={1} alignItems="center">
                     <PhoneIcon fontSize="small" />
-                    <Typography variant="body2">+91 98765 43210</Typography>
+                    <Typography variant="body2">+91 99940 34441</Typography>
                   </Stack>
                   <Stack direction="row" spacing={1} alignItems="center">
                     <EmailIcon fontSize="small" />
