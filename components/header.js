@@ -22,6 +22,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const MotionBox = motion(Box);
 
@@ -74,7 +75,7 @@ export default function Header() {
                 "&:hover": { backgroundColor: "transparent", opacity: 0.8 },
               }}
             >
-            <Image src="/flynella-attestation.png" alt="Attestation Services" width={100} height={100} />
+            <Image src="/flynella-attestation.png" alt="Attestation Services" width={150} height={150} />
             </Button>
           </MotionBox>
 

@@ -49,7 +49,7 @@ const RatingCTASection = () => {
             }}
             href="/contact"
           >
-            Get in Touch .
+            Get in Touch 
           </Button>
         </Stack>
 

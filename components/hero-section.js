@@ -125,9 +125,9 @@ export default function HeroSection() {
                             >
                                 Best Attestation in
                                 <Box
-                                    sx={{fontFamily: "var(--font-source-serif)",}}
+                                    sx={{ fontFamily: "var(--font-source-serif)", }}
                                     component="span"
-                                    
+
                                 >
                                     Tirunelveli
                                 </Box>
@@ -143,35 +143,10 @@ export default function HeroSection() {
                                     maxWidth: 500,
                                     fontWeight: 400,
                                 }}
-                            > 
+                            >
                                 We provide fast, secure and government-approved attestation services in Tirunelveli. Educational, personal and commercial certificates attested for UAE, Saudi Arabia, Qatar, Kuwait and all major countries.
                             </Typography>
 
-                            {/* <Stack direction="row" spacing={2} mt={5}>
-                                <Button
-                                    variant="contained"
-                                    size="large"
-                                    sx={{
-                                        borderRadius: "30px",
-                                        px: 5,
-                                        py: 1.5,
-                                        textTransform: "none",
-                                        fontSize: "1rem",
-                                        fontWeight: 600,
-                                        backgroundColor: "#000",
-                                        color: "#fff",
-                                        transition: "all 0.3s ease",
-                                        "&:hover": {
-                                            backgroundColor: "#1a1a1a",
-                                            transform: "translateY(-2px)",
-                                            boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
-                                        },
-                                    }}
-                                    href="/contact"
-                                >
-                                    Get in Touch
-                                </Button>
-                            </Stack> */}
                             <RatingCTASection />
                         </Box>
 
