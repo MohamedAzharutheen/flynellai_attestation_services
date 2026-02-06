@@ -100,7 +100,7 @@ export default function Header() {
             >
               <Button
                 component={Link}
-                href="/#services"
+                href="/services"
                 sx={navStyle}
                 aria-haspopup="true"
                 aria-expanded={Boolean(servicesAnchorEl) ? "true" : undefined}

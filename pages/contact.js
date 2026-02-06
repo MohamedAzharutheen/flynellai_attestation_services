@@ -61,10 +61,10 @@ export default function ContactPage() {
             container
             spacing={{ xs: 4, md: 6 }}
             alignItems="flex-start"
-            justifyContent="space-between"
+            justifyContent="flex-start"
           >
             {/* Left: Intro + Contact blocks */}
-            <Grid item xs={12} md={5}>
+            <Grid item xs={12} md={5} sx={{ order: { xs: 1, md: 1 } }}>
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -93,7 +93,7 @@ export default function ContactPage() {
                   sx={{
                     color: "rgba(0,0,0,0.6)",
                     mb: 3,
-                    maxWidth: 480,
+                    
                   }}
                 >
                   Share your document type and destination country, and our
@@ -107,7 +107,7 @@ export default function ContactPage() {
                   whileHover={{ y: -4, boxShadow: "0 14px 30px rgba(0,0,0,0.12)" }}
                   transition={{ duration: 0.25 }}
                   elevation={2}
-                  sx={{ p: 2.5, borderRadius: 3 }}
+                  sx={{ p: 2.5, borderRadius: 3, width: { xs: "100%", sm: 350 } }}
                 >
                   <Stack direction="row" spacing={2} alignItems="flex-start">
                     <Box
@@ -147,7 +147,7 @@ export default function ContactPage() {
                   whileHover={{ y: -4, boxShadow: "0 14px 30px rgba(0,0,0,0.12)" }}
                   transition={{ duration: 0.25 }}
                   elevation={2}
-                  sx={{ p: 2.5, borderRadius: 3 }}
+                  sx={{ p: 2.5, borderRadius: 3 , width: { xs: "100%", sm: 350 } }}
                 >
                   <Stack direction="row" spacing={2} alignItems="flex-start">
                     <Box
@@ -189,7 +189,7 @@ export default function ContactPage() {
                   whileHover={{ y: -4, boxShadow: "0 14px 30px rgba(0,0,0,0.12)" }}
                   transition={{ duration: 0.25 }}
                   elevation={2}
-                  sx={{ p: 2.5, borderRadius: 3 }}
+                  sx={{ p: 2.5, borderRadius: 3, width: { xs: "100%", sm: 350 } }}
                 >
                   <Stack direction="row" spacing={2} alignItems="flex-start">
                     <Box
@@ -229,7 +229,7 @@ export default function ContactPage() {
                   whileHover={{ y: -4, boxShadow: "0 14px 30px rgba(0,0,0,0.12)" }}
                   transition={{ duration: 0.25 }}
                   elevation={2}
-                  sx={{ p: 2.5, borderRadius: 3 }}
+                  sx={{ p: 2.5, borderRadius: 3 , width: { xs: "100%", sm: 350 }}}
                 >
                   <Stack direction="row" spacing={2} alignItems="flex-start">
                     <Box
@@ -265,7 +265,7 @@ export default function ContactPage() {
             </Grid>
 
             {/* Right: Contact form */}
-            <Grid item xs={12} md={7}>
+            <Grid item xs={12} md={7} sx={{ order: { xs: 2, md: 2 } }}>
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}

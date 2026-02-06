@@ -157,6 +157,7 @@ export default function HeroSection() {
                                 display: "flex",
                                 justifyContent: "center",
                                 alignItems: "center",
+                                width: "100%",
                             }}
                         >
                             {/* Outer White Border Frame */}
@@ -164,11 +165,11 @@ export default function HeroSection() {
                                 sx={{
                                     position: "relative",
                                     width: "100%",
-                                    maxWidth: 420,
+                                    maxWidth: { xs: 300, sm: 350, md: 420 },
                                     aspectRatio: "1/1.3",
-                                    padding: "16px",
+                                    padding: { xs: "12px", md: "16px" },
                                     backgroundColor: "#f5f1eb",
-                                    borderRadius: "32px",
+                                    borderRadius: { xs: "24px", md: "32px" },
                                     animation: "slideInRight 0.8s ease-out",
                                     "@keyframes slideInRight": {
                                         from: {
