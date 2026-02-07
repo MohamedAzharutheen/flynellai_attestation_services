@@ -17,6 +17,38 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Layout from "@/components/layout";
 
 const MotionPaper = motion(Paper);
+const contactDetails = [
+  {
+    title: "Call us",
+    value: "+91 99940 34441",
+    link: "tel:+919994034441",
+    icon: PhoneIcon,
+    bg: "rgba(37,99,235,0.08)",
+    iconColor: "primary",
+  },
+  {
+    title: "WhatsApp for instant quote",
+    value: "+971 58 873 2300",
+    link: "https://wa.me/971588732300",
+    icon: WhatsAppIcon,
+    bg: "rgba(16,185,129,0.08)",
+    iconColor: "#16a34a",
+  },
+  {
+    title: "Email support",
+    value: "info@attestationuae.com",
+    link: "mailto:info@attestationuae.com",
+    icon: EmailIcon,
+    bg: "rgba(59,130,246,0.08)",
+    iconColor: "primary",
+  },
+  {
+    title: "Office location",
+    value: "Tirunelveli, Tamil Nadu, India\n(Full address here)",
+    icon: LocationOnIcon,
+    bg: "rgba(148,163,184,0.12)",
+  },
+];
 
 export default function ContactPage() {
   return (
@@ -57,219 +89,132 @@ export default function ContactPage() {
         }}
       >
         <Container maxWidth="lg">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: { xs: "2.1rem", md: "2.7rem" },
+                fontWeight: 800,
+                letterSpacing: "-0.03em",
+                mb: 2,
+              }}
+            >
+              Let&apos;s talk about your{" "}
+              <Box
+                component="span"
+                sx={{ fontFamily: "var(--font-source-serif)" }}
+              >
+                attestation
+              </Box>
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{
+                color: "rgba(0,0,0,0.6)",
+                mb: 3,
+
+              }}
+            >
+              Share your document type and destination country, and our
+              team will guide you with a clear, step-by-step attestation
+              plan and transparent pricing.
+            </Typography>
+          </motion.div>
+
           <Grid
             container
             spacing={{ xs: 4, md: 6 }}
-            alignItems="flex-start"
-            justifyContent="flex-start"
+            justifyContent="center"
           >
             {/* Left: Intro + Contact blocks */}
-            <Grid item xs={12} md={5} sx={{ order: { xs: 1, md: 1 } }}>
-              <motion.div
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <Typography
-                  variant="h1"
-                  sx={{
-                    fontSize: { xs: "2.1rem", md: "2.7rem" },
-                    fontWeight: 800,
-                    letterSpacing: "-0.03em",
-                    mb: 2,
-                  }}
-                >
-                  Let&apos;s talk about your{" "}
-                  <Box
-                    component="span"
-                    sx={{ fontFamily: "var(--font-source-serif)" }}
-                  >
-                    attestation
-                  </Box>
-                </Typography>
-
-                <Typography
-                  variant="body1"
-                  sx={{
-                    color: "rgba(0,0,0,0.6)",
-                    mb: 3,
-                    
-                  }}
-                >
-                  Share your document type and destination country, and our
-                  team will guide you with a clear, step-by-step attestation
-                  plan and transparent pricing.
-                </Typography>
-              </motion.div>
+            <Grid item xs={12} sm={6}>
 
               <Stack spacing={2.5}>
-                <MotionPaper
-                  whileHover={{ y: -4, boxShadow: "0 14px 30px rgba(0,0,0,0.12)" }}
-                  transition={{ duration: 0.25 }}
-                  elevation={2}
-                  sx={{ p: 2.5, borderRadius: 3, width: { xs: "100%", sm: 350 } }}
-                >
-                  <Stack direction="row" spacing={2} alignItems="flex-start">
-                    <Box
-                      sx={{
-                        width: 40,
-                        height: 40,
-                        borderRadius: 2,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        backgroundColor: "rgba(37,99,235,0.08)",
-                      }}
-                    >
-                      <PhoneIcon color="primary" />
-                    </Box>
-                    <Box>
-                      <Typography fontWeight={700} mb={0.5}>
-                        Call us
-                      </Typography>
-                      <Typography
-                        component="a"
-                        href="tel:+919994034441"
-                        sx={{
-                          display: "block",
-                          color: "inherit",
-                          textDecoration: "none",
-                          fontSize: "0.95rem",
-                        }}
-                      >
-                        +91 99940 34441
-                      </Typography>
-                    </Box>
-                  </Stack>
-                </MotionPaper>
+                {contactDetails.map((item, index) => {
+                  const Icon = item.icon;
 
-                <MotionPaper
-                  whileHover={{ y: -4, boxShadow: "0 14px 30px rgba(0,0,0,0.12)" }}
-                  transition={{ duration: 0.25 }}
-                  elevation={2}
-                  sx={{ p: 2.5, borderRadius: 3 , width: { xs: "100%", sm: 350 } }}
-                >
-                  <Stack direction="row" spacing={2} alignItems="flex-start">
-                    <Box
+                  return (
+                    <MotionPaper
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.4 }}
+                      whileHover={{
+                        y: -4,
+                        boxShadow: "0 14px 30px rgba(0,0,0,0.12)",
+                      }}
+                      elevation={2}
                       sx={{
-                        width: 40,
-                        height: 40,
-                        borderRadius: 2,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        backgroundColor: "rgba(16,185,129,0.08)",
+                        p: 2.5,
+                        borderRadius: 3,
+                        width: "100%",
                       }}
                     >
-                      <WhatsAppIcon sx={{ color: "#16a34a" }} />
-                    </Box>
-                    <Box>
-                      <Typography fontWeight={700} mb={0.5}>
-                        WhatsApp for instant quote
-                      </Typography>
-                      <Typography
-                        component="a"
-                        href="https://wa.me/971588732300"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        sx={{
-                          display: "block",
-                          color: "inherit",
-                          textDecoration: "none",
-                          fontSize: "0.95rem",
-                        }}
-                      >
-                        +971 58 873 2300
-                      </Typography>
-                    </Box>
-                  </Stack>
-                </MotionPaper>
+                      <Stack direction="row" spacing={2} alignItems="flex-start">
+                        <Box
+                          sx={{
+                            width: 40,
+                            height: 40,
+                            borderRadius: 2,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            backgroundColor: item.bg,
+                          }}
+                        >
+                          <Icon sx={{ color: item.iconColor }} />
+                        </Box>
 
-                <MotionPaper
-                  whileHover={{ y: -4, boxShadow: "0 14px 30px rgba(0,0,0,0.12)" }}
-                  transition={{ duration: 0.25 }}
-                  elevation={2}
-                  sx={{ p: 2.5, borderRadius: 3, width: { xs: "100%", sm: 350 } }}
-                >
-                  <Stack direction="row" spacing={2} alignItems="flex-start">
-                    <Box
-                      sx={{
-                        width: 40,
-                        height: 40,
-                        borderRadius: 2,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        backgroundColor: "rgba(59,130,246,0.08)",
-                      }}
-                    >
-                      <EmailIcon color="primary" />
-                    </Box>
-                    <Box>
-                      <Typography fontWeight={700} mb={0.5}>
-                        Email support
-                      </Typography>
-                      <Typography
-                        component="a"
-                        href="mailto:info@attestationuae.com"
-                        sx={{
-                          display: "block",
-                          color: "inherit",
-                          textDecoration: "none",
-                          fontSize: "0.95rem",
-                        }}
-                      >
-                        info@attestationuae.com
-                      </Typography>
-                    </Box>
-                  </Stack>
-                </MotionPaper>
+                        <Box>
+                          <Typography fontWeight={700} mb={0.5}>
+                            {item.title}
+                          </Typography>
 
-                <MotionPaper
-                  whileHover={{ y: -4, boxShadow: "0 14px 30px rgba(0,0,0,0.12)" }}
-                  transition={{ duration: 0.25 }}
-                  elevation={2}
-                  sx={{ p: 2.5, borderRadius: 3 , width: { xs: "100%", sm: 350 }}}
-                >
-                  <Stack direction="row" spacing={2} alignItems="flex-start">
-                    <Box
-                      sx={{
-                        width: 40,
-                        height: 40,
-                        borderRadius: 2,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        backgroundColor: "rgba(148,163,184,0.12)",
-                      }}
-                    >
-                      <LocationOnIcon color="action" />
-                    </Box>
-                    <Box>
-                      <Typography fontWeight={700} mb={0.5}>
-                        Office location
-                      </Typography>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        sx={{ maxWidth: 260 }}
-                      >
-                        Tirunelveli, Tamil Nadu, India
-                        <br />
-                        (Full address here)
-                      </Typography>
-                    </Box>
-                  </Stack>
-                </MotionPaper>
+                          {item.link ? (
+                            <Typography
+                              component="a"
+                              href={item.link}
+                              target={item.link.startsWith("http") ? "_blank" : undefined}
+                              rel="noopener noreferrer"
+                              sx={{
+                                display: "block",
+                                color: "inherit",
+                                textDecoration: "none",
+                                fontSize: "0.95rem",
+                                whiteSpace: "pre-line",
+                              }}
+                            >
+                              {item.value}
+                            </Typography>
+                          ) : (
+                            <Typography
+                              variant="body2"
+                              color="text.secondary"
+                              sx={{ whiteSpace: "pre-line" }}
+                            >
+                              {item.value}
+                            </Typography>
+                          )}
+                        </Box>
+                      </Stack>
+                    </MotionPaper>
+                  );
+                })}
               </Stack>
+
             </Grid>
 
             {/* Right: Contact form */}
-            <Grid item xs={12} md={7} sx={{ order: { xs: 2, md: 2 } }}>
+            <Grid item xs={12} sm={6}   >
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
               >
                 <Paper
                   id="contact-form"
@@ -312,7 +257,6 @@ export default function ContactPage() {
                       label="Full name"
                       name="name"
                       autoComplete="name"
-                      fullWidth
                       required
                     />
                     <TextField
@@ -320,26 +264,22 @@ export default function ContactPage() {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      fullWidth
                       required
                     />
                     <TextField
                       label="Phone / WhatsApp"
                       name="phone"
                       type="tel"
-                      fullWidth
                       required
                       inputProps={{ inputMode: "tel" }}
                     />
                     <TextField
                       label="Destination country"
                       name="country"
-                      fullWidth
                     />
                     <TextField
                       label="Document type & message"
                       name="message"
-                      fullWidth
                       multiline
                       minRows={4}
                       sx={{

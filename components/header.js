@@ -75,7 +75,7 @@ export default function Header() {
                 "&:hover": { backgroundColor: "transparent", opacity: 0.8 },
               }}
             >
-            <Image src="/flynella-attestation.png" alt="Attestation Services" width={150} height={150} />
+              <Image src="/flynella-attestation.png" alt="Attestation Services" width={150} height={150} />
             </Button>
           </MotionBox>
 
@@ -111,9 +111,15 @@ export default function Header() {
                 anchorEl={servicesAnchorEl}
                 open={Boolean(servicesAnchorEl)}
                 onClose={handleServicesClose}
-                MenuListProps={{ onMouseLeave: handleServicesClose }}
-                elevation={3}
+                disableScrollLock
+                anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+                transformOrigin={{ vertical: "top", horizontal: "left" }}
+                // MenuListProps={{
+                //   onMouseEnter: handleServicesOpen,
+                //   onMouseLeave: handleServicesClose,
+                // }}
               >
+
                 <MenuItem onClick={handleServicesClose}>
                   Degree Certificate
                 </MenuItem>

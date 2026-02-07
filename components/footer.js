@@ -409,7 +409,10 @@ export default function Footer() {
                                 textAlign: { xs: "center", sm: "left" },
                             }}
                         >
-                            &copy; 2026 Attestation Services UAE. All rights reserved.
+                            &copy; 2026 Flynellai Attestation Services Tirunelveli. All rights reserved. <br/>
+                            Developed by <a href="https://www.luzosacreation.com" target="_blank" rel="noopener noreferrer">
+                            Luzosa Creations
+                            </a>
                         </Typography>
 
                         <Stack

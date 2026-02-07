@@ -45,10 +45,7 @@ export default function AttestationProcess() {
             mb: 8,
           }}
         >
-          Simple & Transparent{" "}
-          <Box component="span" sx={{ fontStyle: "italic" }}>
-            Attestation Flow
-          </Box>
+          Certificate Attestation Process
         </Typography>
 
         {/* Steps */}

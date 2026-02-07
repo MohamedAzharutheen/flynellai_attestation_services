@@ -115,36 +115,32 @@ export default function HeroSection() {
                                 variant="h1"
                                 className={inter.className}
                                 sx={{
-                                    fontSize: { xs: "2.5rem", md: "3.5rem" },
+                                    fontSize: { xs: "1.5rem", md: "2.5rem" },
                                     fontWeight: 800,
                                     lineHeight: 1.15,
-                                    letterSpacing: "-0.02em",
                                     mb: 1,
                                 }}
 
                             >
-                                Best Attestation in
-                                <Box
-                                    sx={{ fontFamily: "var(--font-source-serif)", }}
-                                    component="span"
-
-                                >
-                                    Tirunelveli
-                                </Box>
+                                Certificate Attestation in Tirunelveli
                             </Typography>
 
                             <Typography
                                 variant="body1"
-                                className={inter.className}
                                 sx={{
                                     mt: 3,
                                     color: "rgba(0, 0, 0, 0.48)",
-                                    fontSize: { xs: "1rem", md: "1.3rem" },
-                                    maxWidth: 500,
+                                    fontSize: { xs: "1rem", md: "1.2rem" },
                                     fontWeight: 400,
+                                    textAlign: "justify",
+
                                 }}
                             >
-                                We provide fast, secure and government-approved attestation services in Tirunelveli. Educational, personal and commercial certificates attested for UAE, Saudi Arabia, Qatar, Kuwait and all major countries.
+                                We provide fast, reliable and affordable certificate attestation services in Tirunelveli.
+                                Our services include educational certificate attestation, birth certificate attestation,
+                                marriage certificate attestation, PCC attestation and visa services for <strong> UAE Oman Saudi Arabia Kuwait Bahrain Qatar
+                                    Singapore Malaysia , Europe and other countries.</strong> Trusted attestation service provider in Tirunelveli
+                                with doorstep support and expert guidance.
                             </Typography>
 
                             <RatingCTASection />

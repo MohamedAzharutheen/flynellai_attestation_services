@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
+import Seo from "@/components/Seo";
 import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
 import CallbackForm from "@/components/callbackForm";
 import AttestationProcess from "@/components/attestation-process";
+import FaqSection from "@/components/faq-section";
 import Layout from "@/components/layout";
 import { Box } from "@mui/material";
 import { AnimatePresence, motion } from "framer-motion";
@@ -22,37 +24,38 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <Head>
-          <title>
-            Attestation Services UAE | Professional Document Verification
-          </title>
-          <meta
-            name="description"
-            content="Best attestation services in UAE. Professional document verification including embassy attestation, MOFA attestation, apostille services, and certificate verification."
-          />
-          <meta
-            name="keywords"
-            content="attestation services UAE, document verification, embassy attestation, MOFA attestation, apostille, certificate attestation"
-          />
-          <meta
-            property="og:title"
-            content="Best Attestation Services in UAE"
-          />
-          <meta
-            property="og:description"
-            content="Professional attestation and document verification services in UAE"
-          />
-          <meta property="og:type" content="website" />
-          <meta
-            name="robots"
-            content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-          />
-          <link rel="canonical" href="https://yourdomain.com" />
-        </Head>
+        <Seo
+          title="Certificate Attestation Services in Tirunelveli"
+          description="Professional attestation, apostille and embassy services in Tirunelveli — educational, personal and commercial document attestation with fast processing."
+          canonical="https://yourdomain.com"
+          keywords={[
+            "attestation service in tirunelveli",
+            "visa service in tirunelveli",
+            "service",
+            "certificate attestation",
+            "educational certificate",
+            "degree",
+            "diploma",
+            "SSLC",
+            "HSC",
+            "non educational certificate",
+            "experience certificate",
+            "birth certificate",
+            "marriage certificate",
+            "death certificate",
+            "medical certificate",
+            "MEA attestation",
+            "PCC",
+            "apostille",
+            "power of attorney",
+            "police clearance",
+          ]}
+        />
 
         <HeroSection />
         <ServicesSection />
         <AttestationProcess />
+        <FaqSection />
 
         {/* Timed callback form overlay */}
         <AnimatePresence>

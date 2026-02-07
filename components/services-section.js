@@ -23,8 +23,8 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 const servicesData = [
     {
         id: 1,
-        title: "UAE Embassy Attestation",
-        description: "Official attestation from UAE embassies worldwide for document verification",
+        title: "Educational Certificate Attestation",
+        description: "We handle degree certificate, diploma, SSLC and HSC certificate attestation in Tirunelveli for UAE, Qatar, Saudi Arabia, Kuwait and other countries.",
         icon: BuildIcon,
         color: "#1e40af",
         bgColor: "rgba(30, 64, 175, 0.1)",
@@ -32,8 +32,8 @@ const servicesData = [
     },
     {
         id: 2,
-        title: "MOFA Attestation",
-        description: "Ministry of Foreign Affairs attestation for international document authentication",
+        title: "Birth Certificate Attestation in Tirunelveli",
+        description: "Get birth certificate attestation and apostille services in Tirunelveli for immigration,visa processing and family visa purposes.",
         icon: VerifiedIcon,
         color: "#1e3a8a",
         bgColor: "rgba(30, 58, 138, 0.1)",
@@ -41,8 +41,8 @@ const servicesData = [
     },
     {
         id: 3,
-        title: "Apostille Services",
-        description: "Apostille certification for documents used in Hague Convention countries",
+        title: "Marriage Certificate Attestation",
+        description: "We provide marriage certificate attestation in Tirunelveli for spouse visa and family residency applications.",
         icon: SecurityIcon,
         color: "#16a34a",
         bgColor: "rgba(22, 163, 74, 0.1)",
@@ -50,8 +50,8 @@ const servicesData = [
     },
     {
         id: 4,
-        title: "Police Clearance Certificate",
-        description: "Official police clearance verification and attestation services",
+        title: "PCC / Police Clearance Certificate Attestation",
+        description: "Fast PCC attestation services in Tirunelveli for UAE, Qatar and Saudi Arabia with MEA and embassy attestation support.",
         icon: DocumentScannerIcon,
         color: "#059669",
         bgColor: "rgba(5, 150, 105, 0.1)",
@@ -59,8 +59,8 @@ const servicesData = [
     },
     {
         id: 5,
-        title: "Certificate Attestation",
-        description: "Professional attestation for educational and professional certificates",
+        title: "Visa Services in Tirunelveli",
+        description: "Complete visa services in Tirunelveli including document verification,embassy attestation and stamping assistance.",
         icon: AssignmentIcon,
         color: "#7c3aed",
         bgColor: "rgba(124, 58, 237, 0.1)",
@@ -134,7 +134,7 @@ const titleVariants = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.8, ease: "easeOut" },
+        transition: { duration: 0.9, ease: "easeInOut" },
     },
 };
 
@@ -345,8 +345,8 @@ export default function ServicesSection() {
                     <Box sx={{ textAlign: "center", mb: { xs: 4, sm: 5, md: 8 } }}>
                         <motion.div variants={titleVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                             <Typography
-                                variant="h2"
-                                component="h1"
+                                variant="h3"
+                                 component="h2"
                                 sx={{
                                     fontWeight: 800,
                                     fontSize: { xs: "1.75rem", sm: "2.25rem", md: "2.875rem" },
@@ -358,7 +358,7 @@ export default function ServicesSection() {
                                     letterSpacing: "-0.02em",
                                 }}
                             >
-                                Best Attestation Services in Tirunelveli
+                                Our Attestation Services in Tirunelveli
                             </Typography>
                         </motion.div>
 
